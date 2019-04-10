@@ -1,0 +1,32 @@
+import java.util.*;
+public class Twin_Prime{
+public int prime(int a){
+int i,k=0;
+for(i=2;i<a;i++){
+if(a%i==0)
+k=1;
+}
+if(k==0)
+return(1);
+else
+return(0);
+}
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+Twin_Prime ob=new Twin_Prime();
+int r=0,r1=0,d=0;
+System.out.println("Enter two numbers");
+int a1=sc.nextInt();
+int a2=sc.nextint();
+r=ob.prime(a1);
+r1=ob.prime(a2);
+if(a1>a2)
+d=a1-a2;
+else
+d=a2-a1;
+if((r==1)&&(r1==1)&&(d==2))
+System.out.println("Twin prime");
+else
+System.out.println("Not a Twin prime");
+}
+}
